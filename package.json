@@ -1,0 +1,20 @@
+{
+  "name": "imageproxy-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.199.0",
+    "@property-scout/imgproxy": "^1.6.0",
+    "aws-sdk": "^2.1243.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "fetch": "^1.1.0",
+    "log-timestamp": "^0.3.0",
+    "node-fetch": "^3.2.10"
+  }
+}
