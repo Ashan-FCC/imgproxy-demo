@@ -1,0 +1,26 @@
+version: "3"
+services:
+  imageproxy:
+    image: darthsim/imgproxy:v3.1.0
+    container_name: imageproxy
+    ports:
+      - "8080:8080"
+    environment:
+      - IMGPROXY_BIND=:8080
+      - IMGPROXY_CONCURRENCY=20
+      - IMGPROXY_MAX_SRC_RESOLUTION=32
+      - IMGPROXY_TTL=604800
+      - IMGPROXY_STRIP_METADATA=true
+      - IMGPROXY_KEY=
+      - IMGPROXY_SALT=
+      - IMGPROXY_WATERMARK_URL=
+      - DO_ACCESS_KEY=
+      - DO_SECRET_ACCESS_KEY=
+      - AWS_ACCESS_KEY_ID=
+      - AWS_SECRET_ACCESS_KEY=
+      - IMGPROXY_S3_REGION=sgp1
+      - IMGPROXY_USE_S3=true
+      - IMGPROXY_S3_ENDPOINT=https://sgp1.digitaloceanspaces.com
+      - IMGPROXY_BASE_IMAGE_URL=
+      - IMGPROXY_LOG_LEVEL
+    restart: on-failure
